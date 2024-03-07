@@ -16,6 +16,7 @@ const CharacterList = () => {
         })
         .then((data) => {
           setCharacters(data.results);
+          setEpisodeName("");
           setLoading(false);
         });
     } else {
@@ -46,7 +47,6 @@ const CharacterList = () => {
             .catch((error) => {
               console.error("Error fetching responses:", error);
             });
-          setCharacters([]);
         });
     }
   }, [ctx.activeId]);
@@ -58,6 +58,7 @@ const CharacterList = () => {
           {`${characters.length} Characters in episode "${episodeName}"`}
         </h3>
       )}
+
       {!loading && (
         <div className="char-container">
           {characters.map((character) => {
