@@ -5,7 +5,6 @@ import { EpisodeContext } from "../context/episodeProvider";
 const EpisodeList = () => {
   const [episodes, setEpisodes] = useState([]);
   const ctx = useContext(EpisodeContext);
-  console.log("ctx.....", ctx);
 
   useEffect(() => {
     fetch("https://rickandmortyapi.com/api/episode")

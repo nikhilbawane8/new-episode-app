@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useContext } from "react";
 import { EpisodeContext } from "../context/episodeProvider";
+import { Spin } from "antd";
 
 const CharacterList = () => {
   const [characters, setCharacters] = useState([]);
@@ -81,7 +82,13 @@ const CharacterList = () => {
           })}
         </div>
       )}
-      {loading && <h1 className="text-center characters-text">Loading...</h1>}
+      {loading && (
+        <div className="spin-container">
+          <Spin size="large">
+            <div className="content " />
+          </Spin>
+        </div>
+      )}
     </>
   );
 };

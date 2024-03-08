@@ -111,3 +111,15 @@ li {
 .highlight {
   border: 4px solid #fff;
 }
+
+.spin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Optionally, you can set a specific height to the container */
+}
+.content {
+  padding: 50px;
+  background: white;
+  border-radius: 4px;
+}
